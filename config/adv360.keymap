@@ -6,10 +6,8 @@
  */
 
 
-/* THIS FILE WAS GENERATED!
- *
- * This file was generated automatically. You may or may not want to
- * edit it directly.
+/* MANUALLY MODIFIED FILE
+ * ----------------------
  */
 
 #include <behaviors.dtsi>
@@ -39,11 +37,26 @@
 
         default_layer {
             bindings = <
- &kp BACKSLASH            &kp N1     &kp N2      &kp N3     &kp N4    &kp N5             &tog 1              &mo 3           &kp N6     &kp N7     &kp N8            &kp N9     &kp N0  &kp EQUAL
-       &kp TAB  &kp SINGLE_QUOTE  &kp COMMA  &kp PERIOD      &kp P     &kp Y              &none              &none            &kp F      &kp G      &kp C             &kp R      &kp L  &kp SLASH
-       &kp ESC             &kp A      &kp O       &kp E      &kp U     &kp I              &none          &kp LCTRL         &kp LALT                                &kp LGUI  &kp RCTRL      &none     &kp D   &kp H   &kp T   &kp N   &kp S  &kp MINUS
-     &kp LSHFT     &kp SEMICOLON      &kp Q       &kp J      &kp K     &kp X              &none              &none  &kp K_VOLUME_UP      &none      &none  &kp K_PLAY_PAUSE      &none      &none     &kp B   &kp M   &kp W   &kp V   &kp Z  &kp RSHFT
-         &mo 2         &kp GRAVE   &kp CAPS    &kp LEFT  &kp RIGHT  &kp BSPC            &kp DEL  &kp K_VOLUME_DOWN       &kp K_NEXT  &kp ENTER  &kp SPACE            &kp UP   &kp DOWN   &kp LBKT  &kp RBKT   &mo 2
+// Row 1 Left - 7
+&kp BSLH &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &tog 1
+// Row 1 Right - 7
+&mo 3 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp EQUAL
+// Row 2 Left - 7
+&kp TAB &kp SINGLE_QUOTE &kp COMMA &kp PERIOD &kp P &kp Y &none
+// Row 2 Right - 7
+&none &kp F &kp G &kp C &kp R &kp L &kp FSLH
+// Row 3 Left - 10 ?????
+&kp ESC &kp A &kp O &kp E &kp U &kp I &none &kp LCTRL &kp LALT
+// Row 3 Right - 10 ?????
+&kp LGUI &kp RCTRL &none &kp D &kp H &kp T &kp N &kp S &kp MINUS
+// Row 4 Left - 10
+&kp LSHFT &kp SEMICOLON &kp Q &kp J &kp K &kp X &none &none &kp K_VOLUME_UP &none
+// Row 4 Right - 10
+&none &kp K_PLAY_PAUSE &none &none &kp B &kp M &kp W &kp V &kp Z &kp RSHFT
+// Row 5 Left - 8
+&mo 2 &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT &kp BSPC &kp DEL &kp K_VOLUME_DOWN
+// Row 5 Right - 8
+&kp K_NEXT &kp ENTER &kp SPACE &kp UP &kp DOWN &kp LBKT &kp RBKT &mo 2
             >;
         };
 
