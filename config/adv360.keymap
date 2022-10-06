@@ -38,7 +38,7 @@
         default_layer {
             bindings = <
 // Row 1 Left - 7
-&kp BSLH &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &tog 1
+&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &tog 1
 // Row 1 Right - 7
 &mo 3 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp RBKT
 // Row 2 Left - 7
@@ -54,7 +54,7 @@
 // Row 4 Right - 10
 &none &kp C_PLAY_PAUSE &none &none &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
 // Row 5 Left - 8
-&mo 2 &kp GRAVE &kp CAPS &kp LEFT &kp RIGHT &kp BSPC &kp DEL &kp C_VOLUME_DOWN
+&mo 2 &kp BSLH &kp CAPS &kp LEFT &kp RIGHT &kp BSPC &kp DEL &kp C_VOLUME_DOWN
 // Row 5 Right - 8
 &kp C_NEXT &kp ENTER &kp SPACE &kp UP &kp DOWN &kp MINUS &kp EQUAL &mo 2
             >;
