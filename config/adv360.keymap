@@ -6,8 +6,17 @@
  */
 
 
-/* MANUALLY MODIFIED FILE
- * ----------------------
+/* MANUALLY MODIFIED FILE - HOW TO MAP KEYBINDINGS
+ * ===============================================
+ * Each half of the Advantage360 is logically laid out thusly:
+ * Row 1 - the topmost row of the keyboard, 7 keywell keys
+ * Row 2 - second row from the top, 7 keywell keys
+ * Row 3 - third row from the top, 7 keywell keys + 2 topmost thumb cluster keys
+ * Row 4 - fourth row from the top, 6 keywell keys + 2 "empty" +
+ *         middle thumb cluster key (in the vertical stack of 3) +
+ *         1 "empty"
+ * Row 5 - bottom keywell row, 5 keywell keys + 2 large thumb cluster keys +
+ *         lowest small thumb cluster key
  */
 
 #include <behaviors.dtsi>
@@ -37,71 +46,101 @@
 
         default_layer {
             bindings = <
-// Row 1 Left - 7
+// Row 1 Left  - 7 keys
 &kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &mo 3
-// Row 1 Right - 7
+// Row 1 Right - 7 keys
 &mo 3 &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &kp RBKT
-// Row 2 Left - 7
+// Row 2 Left  - 7 keys
 &kp TAB &kp Q &kp W &kp E &kp R &kp T &none
-// Row 2 Right - 7
+// Row 2 Right - 7 keys
 &none &kp Y &kp U &kp I &kp O &kp P &kp LBKT
-// Row 3 Left - 10
+// Row 3 Left  - 9 keys
 &kp ESC &kp A &kp S &kp D &kp F &kp G &none &kp LGUI &kp LCTRL
-// Row 3 Right - 10
+// Row 3 Right - 9 keys
 &kp RALT &kp C_PLAY_PAUSE &none &kp H &kp J &kp K &kp L &kp SEMI &kp SQT
-// Row 4 Left - 10
+// Row 4 Left  - 10 keys
 &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &none &none &kp C_VOLUME_UP &none
-// Row 4 Right - 10
+// Row 4 Right - 10 keys
 &none &kp C_NEXT &none &none &kp N &kp M &kp COMMA &kp DOT &kp FSLH &kp RSHFT
-// Row 5 Left - 8
+// Row 5 Left  - 8 keys
 &mo 2 &kp CAPS &kp BSLH &kp LEFT &kp RIGHT &kp BSPC &kp DEL &kp C_VOLUME_DOWN
-// Row 5 Right - 8
+// Row 5 Right - 8 keys
 &kp C_PREVIOUS &kp ENTER &kp SPACE &kp UP &kp DOWN &kp MINUS &kp EQUAL &mo 2
             >;
         };
 
         layer_keypad {
             bindings = <
-// Row 1 Left - 7
+// Row 1 Left  - 7 keys
 &kp BSLH &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &trans
-// Row 1 Right - 7
+// Row 1 Right - 7 keys
 &mo 3 &kp N6 &kp KP_NUM &kp KP_EQUAL &kp KP_DIVIDE &kp KP_MULTIPLY &kp RBKT
-// Row 2 Left - 7
+// Row 2 Left  - 7 keys
 &kp TAB &kp Q &kp W &kp E &kp R &kp T &none
-// Row 2 Right - 7
+// Row 2 Right - 7 keys
 &none &kp Y &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp KP_MINUS &kp LBKT
-// Row 3 Left - 10
+// Row 3 Left  - 9 keys
 &kp ESC &kp A &kp S &kp D &kp F &kp G &none &kp LGUI &kp LCTRL
-// Row 3 Right - 10
+// Row 3 Right - 9 keys
 &kp RALT &kp C_PLAY_PAUSE &none &kp H &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_PLUS &kp SQT
-// Row 4 Left - 10
+// Row 4 Left  - 10 keys
 &kp LSHFT &kp Z &kp X &kp C &kp V &kp B &none &none &kp C_VOLUME_UP &none
-// Row 4 Right - 10
+// Row 4 Right - 10 keys
 &none &kp C_NEXT &none &none &kp N &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp KP_ENTER &kp RSHFT
-// Row 5 Left - 8
+// Row 5 Left  - 8 keys
 &mo 2 &kp CAPS &kp GRAVE &kp LEFT &kp RIGHT &kp BSPC &kp DEL &kp C_VOLUME_DOWN
-// Row 5 Right - 8
+// Row 5 Right - 8 keys
 &kp C_PREVIOUS &kp ENTER &kp KP_N0 &kp UP &kp DOWN &kp KP_DOT &kp EQUAL &mo 2
             >;
         };
 
         layer_fn {
             bindings = <
- &kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6            &tog 1   &mo 3  &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
- &trans  &trans  &trans  &trans  &trans  &trans             &none   &none  &trans  &trans  &trans   &trans   &trans   &trans
- &trans  &trans  &trans  &trans  &trans  &trans             &none  &trans  &trans                   &trans   &trans    &none  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans             &none   &none  &trans   &none   &none   &trans    &none    &none  &trans  &trans  &trans  &trans  &trans  &trans
- &trans  &trans  &trans  &trans  &trans  &trans            &trans  &trans  &trans  &trans  &trans   &trans   &trans   &trans  &trans  &trans
+// Row 1 Left  - 7 keys
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &tog 1
+// Row 1 Right - 7 keys
+&mo 3   &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+// Row 2 Left  - 7 keys
+&trans  &trans  &trans  &trans  &trans  &trans  &none
+// Row 2 Right - 7 keys
+&none   &trans  &trans  &trans  &trans  &trans  &trans
+// Row 3 Left  - 9 keys
+&trans  &trans  &trans  &trans  &trans  &trans  &none  &trans  &trans
+// Row 3 Right - 9 keys
+&trans  &trans  &none   &trans  &trans  &trans  &trans &trans  &trans
+// Row 4 Left  - 10 keys
+&trans  &trans  &trans  &trans  &trans  &trans  &none  &none   &trans  &none
+// Row 4 Right - 10 keys
+&none   &trans  &none   &none   &trans  &trans  &trans &trans  &trans  &trans
+// Row 5 Left  - 8 keys
+&trans  &trans  &trans  &trans  &trans  &trans  &trans &trans
+// Row 5 Right - 8 keys
+&trans  &trans  &trans  &trans  &trans  &trans  &trans &trans
             >;
         };
 
         layer_mod {
             bindings = <
-  &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3     &bt BT_SEL 4                             &none       &trans  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                   &none
-  &none         &none         &none         &none         &none            &none                       &bootloader  &bootloader         &none         &none            &none         &none         &none                   &none
-  &none         &none         &none         &none         &none            &none            &rgb_ug RGB_MEFS_CMD 5   &bt BT_CLR         &none                                   &bt BT_CLR    &bt BT_CLR  &rgb_ug RGB_MEFS_CMD 5   &none   &none   &none   &none   &none   &none
-  &none         &none         &none         &none         &none            &none                             &none        &none         &none         &none            &none         &none         &none                   &none   &none   &none   &none   &none   &none   &none
-  &none         &none         &none    &bl BL_INC    &bl BL_DEC  &rgb_ug RGB_TOG                        &bl BL_TOG        &none         &none    &bl BL_TOG  &rgb_ug RGB_TOG    &bl BL_INC    &bl BL_DEC                   &none   &none   &none
+// Row 1 Left  - 7 keys
+&none    &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4  &none
+// Row 1 Right - 7 keys
+&trans   &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3    &bt BT_SEL 4  &none
+// Row 2 Left  - 7 keys
+&none    &none    &none   &none    &none    &none    &bootloader
+// Row 2 Right - 7 keys
+&bootloader    &none    &none    &none    &none    &none    &none
+// Row 3 Left  - 9 keys
+&none    &none    &none    &none    &none    &none    &rgb_ug RGB_MEFS_CMD 5    &bt BT_CLR    &none
+// Row 3 Right - 9 keys
+&bt BT_CLR    &bt BT_CLR    &rgb_ug RGB_MEFS_CMD 5    &none    &none    &none    &none    &none    &none
+// Row 4 Left  - 10 keys
+&none    &none    &none    &none    &none    &none    &none    &none    &kp C_BRIGHTNESS_INC    &none
+// Row 4 Right - 10 keys
+&none    &none    &none    &none    &none    &none    &none    &none    &none    &none
+// Row 5 Left  - 8 keys
+&none    &none    &none    &bl BL_INC    &bl BL_DEC    &rgb_ug RGB_TOG    &bl BL_TOG    &kp C_BRIGHTNESS_DEC
+// Row 5 Right - 8 keys
+&none    &bl BL_TOG  &rgb_ug RGB_TOG    &bl BL_INC    &bl BL_DEC    &none    &none    &none
             >;
         };
 
